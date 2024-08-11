@@ -34,7 +34,7 @@ body{
     stroke: rgb(239, 235, 235);
     stroke-width: 3;
     fill: none;
-    animation: circle 1s linear infinite;
+    animation: circle 2s linear infinite;
 }
 
 /* .line{
@@ -45,11 +45,13 @@ body{
 } */
 
 .line{
+    position: absolute;
+    top: 40%;
     width: 4.5rem;
-    height: 0.3rem;
-    background-color: white;
-    border-radius: 5rem;
-    animation: line 2s linear infinite;
+    height: 4.5rem;
+    border-top: 2px solid white;
+    transform: translateY(-40%);
+    animation: line 4s linear infinite;
 }
 
 
@@ -65,10 +67,25 @@ body{
 
 @keyframes line {
    0%{
-    transform: translate(-45px,130px);
+    transform: translateX(0px) rotate(0deg);
+    
+   }
+
+   50%{
+    transform:translateX(180px) rotate(0deg);
+    /* border-radius: 50%; */
+   }
+
+   55%{
+      transform:translateX(200px) rotate(360deg);
+      border-radius: 50%;
+   }
+   60%{
+    transform:translateX(220px) rotate(360deg);
+    border-radius: 0;
    }
    100%{
-    transform: translate(450px,180px);
+    transform:translateX(400px) rotate(360deg);
    }
 }
 
