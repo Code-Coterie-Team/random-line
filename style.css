@@ -50,7 +50,7 @@ body{
     width: 4.5rem;
     height: 4.5rem;
     border-top: 2px solid white;
-    transform: translateY(-40%);
+    /* transform: translateY(-100%); */
     animation: line 4s linear infinite;
 }
 
@@ -67,25 +67,25 @@ body{
 
 @keyframes line {
    0%{
-    transform: translateX(0px) rotate(0deg);
+    transform: translate(0px,15px) rotate(0deg);
     
    }
 
-   50%{
-    transform:translateX(180px) rotate(0deg);
-    /* border-radius: 50%; */
-   }
+    30%{
+    transform:translate(180px,15px) rotate(0deg);
+     border-radius: 50%; 
+   } 
 
-   55%{
-      transform:translateX(200px) rotate(360deg);
+   50%{
+      transform:translate(170px,15px) rotate(360deg);
       border-radius: 50%;
    }
    60%{
-    transform:translateX(220px) rotate(360deg);
+    transform:translate(220px,15px) rotate(360deg);
     border-radius: 0;
    }
    100%{
-    transform:translateX(400px) rotate(360deg);
+    transform:translate(400px,15px) rotate(360deg);
    }
 }
 
